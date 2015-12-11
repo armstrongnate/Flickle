@@ -1,0 +1,60 @@
+{
+  "name": "WTAHelpers",
+  "version": "0.1.3",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "summary": "An assortment of useful categories and classes.",
+  "homepage": "https://github.com/willowtreeapps/WTAHelpers",
+  "authors": {
+    "Trung Tran": "trung.tran@willowtreeapps.com"
+  },
+  "source": {
+    "git": "https://github.com/willowtreeapps/WTAHelpers",
+    "tag": "0.1.3"
+  },
+  "requires_arc": true,
+  "platforms": {
+    "ios": "6.0"
+  },
+  "source_files": "WTAHelpers/*.{h,m}",
+  "subspecs": [
+    {
+      "name": "WTAFunctionalHelpers",
+      "source_files": "WTAHelpers/WTAFunctionalHelpers/*.{h,m}"
+    },
+    {
+      "name": "WTAFrameHelpers",
+      "source_files": "WTAHelpers/WTAFrameHelpers/*.{h,m}"
+    },
+    {
+      "name": "WTAAutoLayoutHelpers",
+      "source_files": "WTAHelpers/WTAAutoLayoutHelpers/*.{h,m}"
+    },
+    {
+      "name": "WTAColorImage",
+      "source_files": "WTAHelpers/WTAColorImage/*.{h,m}"
+    },
+    {
+      "name": "WTANibLoading",
+      "source_files": "WTAHelpers/WTANibLoading/*.{h,m}"
+    },
+    {
+      "name": "WTAReusableIdentifier",
+      "source_files": "WTAHelpers/WTAReusableIdentifier/*.{h,m}"
+    },
+    {
+      "name": "WTAColorHelpers",
+      "source_files": "WTAHelpers/WTAColorHelpers/*.{h,m}"
+    },
+    {
+      "name": "WTADeviceHelpers",
+      "source_files": "WTAHelpers/WTADeviceHelpers/*.{h,m}",
+      "frameworks": [
+        "SystemConfiguration",
+        "AVFoundation"
+      ]
+    }
+  ]
+}
