@@ -8,6 +8,7 @@
 
 import UIKit
 import WTAHelpers
+import ReactiveCocoa
 
 class SearchViewController: UIViewController {
 
@@ -20,6 +21,8 @@ class SearchViewController: UIViewController {
             viewModel.isSearching.producer.startWithNext {
                 self.loadingView.hidden = !$0
             }
+
+            viewModel.query <~ searchField.rac_text
         }
     }
     let searchField = UITextField()
@@ -104,9 +107,12 @@ class SearchViewController: UIViewController {
     }
 
     func doSearch(query: String) {
-        viewModel?.search(query)
+        viewModel?.search()
             .onSuccess { [weak self] (photos: [Photo]) in
-                // TODO: navigate to results
+                if let photosViewModel = self?.viewModel?.photosViewModel() {
+                    let photos = PhotosViewController(viewModel: photosViewModel)
+                    self?.navigationController?.pushViewController(photos, animated: true)
+                }
             }
     }
 
@@ -116,6 +122,7 @@ extension SearchViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if let text = textField.text where textField == searchField {
+            textField.resignFirstResponder()
             doSearch(text)
         }
         return true
