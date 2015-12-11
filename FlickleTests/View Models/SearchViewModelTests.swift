@@ -31,9 +31,10 @@ class SearchViewModelTests: XCTestCase {
         // Given
         let expectation = expectationWithDescription("search for puppies")
         var response: [Photo]?
+        viewModel.query.value = "puppies"
 
         // When
-        viewModel.search("puppies")
+        viewModel.search()
             .onSuccess { (photos: [Photo]) in
                 response = photos
                 expectation.fulfill()
