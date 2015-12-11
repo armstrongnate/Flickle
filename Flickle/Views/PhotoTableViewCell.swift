@@ -63,14 +63,18 @@ class PhotoTableViewCell: UITableViewCell {
         photoInfoStackView.translatesAutoresizingMaskIntoConstraints = false
         photoInfoStackView.axis = .Vertical
         photoInfoStackView.spacing = 6
+        photoInfoStackView.distribution = .Fill
         contentView.addSubview(photoInfoStackView)
 
         photoTitleLabel = UILabel()
         photoTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        photoTitleLabel.setContentHuggingPriority(1000, forAxis: .Vertical)
         photoInfoStackView.addArrangedSubview(photoTitleLabel)
 
         photoOwnerLabel = UILabel()
         photoOwnerLabel.translatesAutoresizingMaskIntoConstraints = false
+        photoOwnerLabel.font = UIFont.systemFontOfSize(14)
+        photoOwnerLabel.textColor = UIColor.lightGrayColor()
         photoInfoStackView.addArrangedSubview(photoOwnerLabel)
 
         setupConstraints()
