@@ -89,6 +89,12 @@ class SearchViewController: UIViewController {
         searchField.becomeFirstResponder()
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        navigationController?.navigationBarHidden = true
+    }
+
     func keyboardWillShow(notification: NSNotification) {
         keyboardRect = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue
     }
