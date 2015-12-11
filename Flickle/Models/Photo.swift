@@ -18,6 +18,7 @@ struct Photo {
 
     let url: URL
     let title: String
+    let ownerName: String
 
 }
 
@@ -26,6 +27,7 @@ extension Photo: NetworkResponseType {
     init?(json: JSON) {
         if
             let title = json["title"].string,
+            let ownerName = json["ownername"].string,
             let square = json["url_sq"].string,
             let large = json["url_l"].string,
             let squareURL = NSURL(string: square),
@@ -33,6 +35,7 @@ extension Photo: NetworkResponseType {
         {
             self.title = title
             self.url = URL(square: squareURL, large: largeURL)
+            self.ownerName = ownerName
         }
         else {
             return nil

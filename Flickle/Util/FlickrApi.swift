@@ -30,7 +30,7 @@ class FlickrApi {
             "api_key": apiKey,
             "method": "flickr.photos.search",
             "text": query,
-            "extras": "url_sq,url_l",
+            "extras": "url_sq,url_l,owner_name",
             "format": "json",
             "nojsoncallback": "1",
             "per_page": "\(perPage)"
