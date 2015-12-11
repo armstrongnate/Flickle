@@ -30,9 +30,9 @@ class PhotosViewController: UIViewController {
 
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 55
-        tableView.allowsSelection = false
         tableView.registerClass(PhotoTableViewCell.self, forCellReuseIdentifier: PhotoTableViewCell.wta_reuseableIdentifier())
         view.addSubview(tableView)
         tableView.wta_addEdgeConstraintsToSuperview(UIEdgeInsetsZero)
@@ -46,7 +46,7 @@ class PhotosViewController: UIViewController {
 
 }
 
-// MARK: UITableViewDataSource
+// MARK: - UITableViewDataSource
 extension PhotosViewController: UITableViewDataSource {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,4 +59,13 @@ extension PhotosViewController: UITableViewDataSource {
         return cell
     }
 
+}
+
+// MARK: - UITableViewDelegate
+extension PhotosViewController: UITableViewDelegate {
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let photo = PhotoViewController(viewModel: viewModel.photoViewModel(indexPath))
+        navigationController?.pushViewController(photo, animated: true)
+    }
 }

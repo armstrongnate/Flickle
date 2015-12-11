@@ -29,6 +29,7 @@
 		43B5E2F81C1A9FAE0013C730 /* JMImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B5E2F51C1A9FAE0013C730 /* JMImageCache.m */; };
 		43B5E2F91C1A9FAE0013C730 /* UIImageView+JMImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B5E2F71C1A9FAE0013C730 /* UIImageView+JMImageCache.m */; };
 		43B5E2FC1C1AA2450013C730 /* UIKit+ReactiveCocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5E2FB1C1AA2450013C730 /* UIKit+ReactiveCocoa.swift */; };
+		43B5E2FE1C1AACEE0013C730 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5E2FD1C1AACEE0013C730 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		43B5E2F71C1A9FAE0013C730 /* UIImageView+JMImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JMImageCache.m"; sourceTree = "<group>"; };
 		43B5E2FA1C1A9FFA0013C730 /* Flickle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Flickle-Bridging-Header.h"; sourceTree = "<group>"; };
 		43B5E2FB1C1AA2450013C730 /* UIKit+ReactiveCocoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIKit+ReactiveCocoa.swift"; path = "Util/UIKit+ReactiveCocoa.swift"; sourceTree = "<group>"; };
+		43B5E2FD1C1AACEE0013C730 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoViewController.swift; path = "View Controllers/PhotoViewController.swift"; sourceTree = "<group>"; };
 		5CEFC3CF4762751B5509ABF5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6B1C56E8183E042685F650CD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 			children = (
 				43B5E2D51C1A71950013C730 /* SearchViewController.swift */,
 				43B5E2EA1C1A9C060013C730 /* PhotosViewController.swift */,
+				43B5E2FD1C1AACEE0013C730 /* PhotoViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				43B5E2F81C1A9FAE0013C730 /* JMImageCache.m in Sources */,
 				43B5E2ED1C1A9C270013C730 /* PhotosViewModel.swift in Sources */,
 				43B5E2B21C1A6F5A0013C730 /* AppDelegate.swift in Sources */,
+				43B5E2FE1C1AACEE0013C730 /* PhotoViewController.swift in Sources */,
 				43B5E2DB1C1A7A460013C730 /* UIColorExtension.swift in Sources */,
 				43B5E2F01C1A9DBC0013C730 /* PhotoTableViewCell.swift in Sources */,
 			);
