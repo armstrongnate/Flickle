@@ -86,12 +86,6 @@ class SearchViewController: UIViewController {
         spinner.wta_addCenteringConstraintToSuperview()
     }
 
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-
-        searchField.becomeFirstResponder()
-    }
-
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
