@@ -13,6 +13,9 @@
 		43B5E2B91C1A6F5A0013C730 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B5E2B81C1A6F5A0013C730 /* Assets.xcassets */; };
 		43B5E2BC1C1A6F5B0013C730 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B5E2BA1C1A6F5B0013C730 /* LaunchScreen.storyboard */; };
 		43B5E2C71C1A6F5B0013C730 /* FlickleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5E2C61C1A6F5B0013C730 /* FlickleTests.swift */; };
+		43B5E2D61C1A71950013C730 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5E2D51C1A71950013C730 /* SearchViewController.swift */; };
+		43B5E2D91C1A72420013C730 /* NSAttributedTextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5E2D81C1A72420013C730 /* NSAttributedTextExtension.swift */; };
+		43B5E2DB1C1A7A460013C730 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5E2DA1C1A7A460013C730 /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		43B5E2C21C1A6F5B0013C730 /* FlickleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B5E2C61C1A6F5B0013C730 /* FlickleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickleTests.swift; sourceTree = "<group>"; };
 		43B5E2C81C1A6F5B0013C730 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43B5E2D51C1A71950013C730 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "View Controllers/SearchViewController.swift"; sourceTree = "<group>"; };
+		43B5E2D81C1A72420013C730 /* NSAttributedTextExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSAttributedTextExtension.swift; path = Util/NSAttributedTextExtension.swift; sourceTree = "<group>"; };
+		43B5E2DA1C1A7A460013C730 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Util/UIColorExtension.swift; sourceTree = "<group>"; };
 		5CEFC3CF4762751B5509ABF5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6B1C56E8183E042685F650CD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +88,8 @@
 		43B5E2B01C1A6F5A0013C730 /* Flickle */ = {
 			isa = PBXGroup;
 			children = (
+				43B5E2D71C1A72240013C730 /* Util */,
+				43B5E2D41C1A717D0013C730 /* View Controllers */,
 				43B5E2B11C1A6F5A0013C730 /* AppDelegate.swift */,
 				43B5E2B51C1A6F5A0013C730 /* Main.storyboard */,
 				43B5E2B81C1A6F5A0013C730 /* Assets.xcassets */,
@@ -98,6 +106,23 @@
 				43B5E2C81C1A6F5B0013C730 /* Info.plist */,
 			);
 			path = FlickleTests;
+			sourceTree = "<group>";
+		};
+		43B5E2D41C1A717D0013C730 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				43B5E2D51C1A71950013C730 /* SearchViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		43B5E2D71C1A72240013C730 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				43B5E2D81C1A72420013C730 /* NSAttributedTextExtension.swift */,
+				43B5E2DA1C1A7A460013C730 /* UIColorExtension.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		83111E5BE9E3F570808FCA8A /* Frameworks */ = {
@@ -269,7 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B5E2D91C1A72420013C730 /* NSAttributedTextExtension.swift in Sources */,
+				43B5E2D61C1A71950013C730 /* SearchViewController.swift in Sources */,
 				43B5E2B21C1A6F5A0013C730 /* AppDelegate.swift in Sources */,
+				43B5E2DB1C1A7A460013C730 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
