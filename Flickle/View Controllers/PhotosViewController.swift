@@ -42,6 +42,9 @@ class PhotosViewController: UIViewController {
         super.viewWillAppear(animated)
 
         navigationController?.navigationBarHidden = false
+        if let selected = tableView.indexPathForSelectedRow {
+            tableView.deselectRowAtIndexPath(selected, animated: true)
+        }
     }
 
 }
