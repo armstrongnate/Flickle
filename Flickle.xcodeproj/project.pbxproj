@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141222D785FEDFA7E39EE6A3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02929BE883F128B60D4B313A /* Pods.framework */; };
 		1D4F7DCFDFE0F1F9EC0D2E6A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02929BE883F128B60D4B313A /* Pods.framework */; };
 		43B5E2B21C1A6F5A0013C730 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5E2B11C1A6F5A0013C730 /* AppDelegate.swift */; };
 		43B5E2B71C1A6F5A0013C730 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B5E2B51C1A6F5A0013C730 /* Main.storyboard */; };
@@ -16,6 +17,11 @@
 		43B5E2D61C1A71950013C730 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5E2D51C1A71950013C730 /* SearchViewController.swift */; };
 		43B5E2D91C1A72420013C730 /* NSAttributedTextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5E2D81C1A72420013C730 /* NSAttributedTextExtension.swift */; };
 		43B5E2DB1C1A7A460013C730 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5E2DA1C1A7A460013C730 /* UIColorExtension.swift */; };
+		43B5E2DE1C1A859B0013C730 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5E2DD1C1A859B0013C730 /* SearchViewModel.swift */; };
+		43B5E2E01C1A85E60013C730 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5E2DF1C1A85E60013C730 /* NetworkController.swift */; };
+		43B5E2E21C1A86160013C730 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5E2E11C1A86160013C730 /* SearchViewModelTests.swift */; };
+		43B5E2E61C1A882B0013C730 /* FlickrApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5E2E51C1A882B0013C730 /* FlickrApi.swift */; };
+		43B5E2E91C1A8AF40013C730 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5E2E81C1A8AF40013C730 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,11 @@
 		43B5E2D51C1A71950013C730 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "View Controllers/SearchViewController.swift"; sourceTree = "<group>"; };
 		43B5E2D81C1A72420013C730 /* NSAttributedTextExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSAttributedTextExtension.swift; path = Util/NSAttributedTextExtension.swift; sourceTree = "<group>"; };
 		43B5E2DA1C1A7A460013C730 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Util/UIColorExtension.swift; sourceTree = "<group>"; };
+		43B5E2DD1C1A859B0013C730 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewModel.swift; path = "View Models/SearchViewModel.swift"; sourceTree = "<group>"; };
+		43B5E2DF1C1A85E60013C730 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = Util/NetworkController.swift; sourceTree = "<group>"; };
+		43B5E2E11C1A86160013C730 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewModelTests.swift; path = "View Models/SearchViewModelTests.swift"; sourceTree = "<group>"; };
+		43B5E2E51C1A882B0013C730 /* FlickrApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlickrApi.swift; path = Util/FlickrApi.swift; sourceTree = "<group>"; };
+		43B5E2E81C1A8AF40013C730 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = Models/Photo.swift; sourceTree = "<group>"; };
 		5CEFC3CF4762751B5509ABF5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6B1C56E8183E042685F650CD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				141222D785FEDFA7E39EE6A3 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +100,9 @@
 		43B5E2B01C1A6F5A0013C730 /* Flickle */ = {
 			isa = PBXGroup;
 			children = (
+				43B5E2E71C1A8AD60013C730 /* Models */,
 				43B5E2D71C1A72240013C730 /* Util */,
+				43B5E2DC1C1A85840013C730 /* View Models */,
 				43B5E2D41C1A717D0013C730 /* View Controllers */,
 				43B5E2B11C1A6F5A0013C730 /* AppDelegate.swift */,
 				43B5E2B51C1A6F5A0013C730 /* Main.storyboard */,
@@ -104,6 +118,7 @@
 			children = (
 				43B5E2C61C1A6F5B0013C730 /* FlickleTests.swift */,
 				43B5E2C81C1A6F5B0013C730 /* Info.plist */,
+				43B5E2E31C1A861B0013C730 /* View Models */,
 			);
 			path = FlickleTests;
 			sourceTree = "<group>";
@@ -121,8 +136,34 @@
 			children = (
 				43B5E2D81C1A72420013C730 /* NSAttributedTextExtension.swift */,
 				43B5E2DA1C1A7A460013C730 /* UIColorExtension.swift */,
+				43B5E2DF1C1A85E60013C730 /* NetworkController.swift */,
+				43B5E2E51C1A882B0013C730 /* FlickrApi.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		43B5E2DC1C1A85840013C730 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				43B5E2DD1C1A859B0013C730 /* SearchViewModel.swift */,
+			);
+			name = "View Models";
+			sourceTree = "<group>";
+		};
+		43B5E2E31C1A861B0013C730 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				43B5E2E11C1A86160013C730 /* SearchViewModelTests.swift */,
+			);
+			name = "View Models";
+			sourceTree = "<group>";
+		};
+		43B5E2E71C1A8AD60013C730 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				43B5E2E81C1A8AF40013C730 /* Photo.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		83111E5BE9E3F570808FCA8A /* Frameworks */ = {
@@ -169,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43B5E2CE1C1A6F5B0013C730 /* Build configuration list for PBXNativeTarget "FlickleTests" */;
 			buildPhases = (
+				17EA2AF97C3EEA119DB49C6E /* Check Pods Manifest.lock */,
 				43B5E2BE1C1A6F5B0013C730 /* Sources */,
 				43B5E2BF1C1A6F5B0013C730 /* Frameworks */,
 				43B5E2C01C1A6F5B0013C730 /* Resources */,
+				1BECC01668790729805CD4AD /* Embed Pods Frameworks */,
+				DDB7E3F9BC53C73ABFB6C258 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,6 +286,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		17EA2AF97C3EEA119DB49C6E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1BECC01668790729805CD4AD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		67AD62F9089CA691DA2E72C4 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,6 +361,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		DDB7E3F9BC53C73ABFB6C258 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -294,7 +383,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B5E2E91C1A8AF40013C730 /* Photo.swift in Sources */,
 				43B5E2D91C1A72420013C730 /* NSAttributedTextExtension.swift in Sources */,
+				43B5E2E61C1A882B0013C730 /* FlickrApi.swift in Sources */,
+				43B5E2DE1C1A859B0013C730 /* SearchViewModel.swift in Sources */,
+				43B5E2E01C1A85E60013C730 /* NetworkController.swift in Sources */,
 				43B5E2D61C1A71950013C730 /* SearchViewController.swift in Sources */,
 				43B5E2B21C1A6F5A0013C730 /* AppDelegate.swift in Sources */,
 				43B5E2DB1C1A7A460013C730 /* UIColorExtension.swift in Sources */,
@@ -305,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B5E2E21C1A86160013C730 /* SearchViewModelTests.swift in Sources */,
 				43B5E2C71C1A6F5B0013C730 /* FlickleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +542,7 @@
 		};
 		43B5E2CF1C1A6F5B0013C730 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CEFC3CF4762751B5509ABF5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FlickleTests/Info.plist;
@@ -460,6 +555,7 @@
 		};
 		43B5E2D01C1A6F5B0013C730 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B1C56E8183E042685F650CD /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FlickleTests/Info.plist;

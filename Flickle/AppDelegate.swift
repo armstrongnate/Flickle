@@ -15,7 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        if let root = (window?.rootViewController as? UINavigationController)?.topViewController as? SearchViewController {
+            let networkController = NetworkController(baseURL: "https://api.flickr.com/services/rest/")
+            let api = FlickrApi(networkController: networkController, apiKey: "1dd17dde0fed7286935d83875fcc17dd")
+            root.viewModel = SearchViewModel(api: api)
+        }
         return true
     }
 

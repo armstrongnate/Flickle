@@ -8,4 +8,4 @@ pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 pod 'WTAHelpers', :git => 'git@github.com:willowtreeapps/WTAHelpers.git'
 pod 'ReactiveCocoa', '4.0.0-alpha-3'
 
-link_with 'Flickle'
+link_with 'Flickle', 'FlickleTests'

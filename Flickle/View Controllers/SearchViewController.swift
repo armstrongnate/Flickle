@@ -11,6 +11,17 @@ import WTAHelpers
 
 class SearchViewController: UIViewController {
 
+    var viewModel: SearchViewModel? {
+        didSet {
+            guard let viewModel = viewModel else {
+                return
+            }
+            // show the spinner during network request
+            viewModel.isSearching.producer.startWithNext {
+                self.loadingView.hidden = !$0
+            }
+        }
+    }
     let searchField = UITextField()
     var searchFieldVerticalConstraint: NSLayoutConstraint?
     var keyboardRect: CGRect? {
@@ -23,6 +34,7 @@ class SearchViewController: UIViewController {
             }
         }
     }
+    let loadingView = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +56,7 @@ class SearchViewController: UIViewController {
         searchField.translatesAutoresizingMaskIntoConstraints = false
         searchField.backgroundColor = UIColor.whiteColor()
         searchField.layer.sublayerTransform = CATransform3DMakeTranslation(15, 0, 0) // text inset hack
+        searchField.delegate = self
         searchBg.addSubview(searchField)
         let margin: CGFloat = 0.5
         searchField.wta_addEdgeConstraintsToSuperview(UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin))
@@ -56,6 +69,18 @@ class SearchViewController: UIViewController {
         view.addSubview(logo)
         logo.wta_addConstraintPlacingViewAboveView(searchField, separation: 8)
         logo.wta_addHorizontallyCenterConstraintToSuperview()
+
+        // loading view
+        loadingView.translatesAutoresizingMaskIntoConstraints = false
+        loadingView.hidden = true
+        loadingView.backgroundColor = UIColor(white: 0, alpha: 0.8)
+        view.addSubview(loadingView)
+        loadingView.wta_addEdgeConstraintsToSuperview(UIEdgeInsetsZero)
+        let spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        spinner.startAnimating()
+        loadingView.addSubview(spinner)
+        spinner.wta_addCenteringConstraintToSuperview()
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -70,6 +95,24 @@ class SearchViewController: UIViewController {
 
     func keyboardWillHide(notification: NSNotification) {
         keyboardRect = nil
+    }
+
+    func doSearch(query: String) {
+        viewModel?.search(query)
+            .onSuccess { [weak self] (photos: [Photo]) in
+                // TODO: navigate to results
+            }
+    }
+
+}
+
+extension SearchViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if let text = textField.text where textField == searchField {
+            doSearch(text)
+        }
+        return true
     }
 
 }
